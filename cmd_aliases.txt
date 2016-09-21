@@ -1,0 +1,104 @@
+ls=dir $*
+ps=tasklist $*
+clear=cls
+
+run_cmd=C:\Users\syhamza\cmd_autorun.cmd
+open_aliases=sublime_text C:\Users\syhamza\cmd_aliases.txt
+sdhelp=subl C:\Users\syhamza\sdhelp.txt
+pad=gvim C:\Users\syhamza\pad.txt
+opad=sublime_text C:\Users\syhamza\$1.txt
+pad1=gvim C:\Users\syhamza\pad1.txt
+rough=gvim C:\Users\syhamza\rought.txt
+open_vimrc=sublime_text C:\Users\syhamza\_vimrc
+vimfiles=cd C:\Program Files (x86)\Vim\vimfiles
+dev=devenv $1
+sdkTools=explorer "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6 Tools"
+
+desktop=cd C:\Users\syhamza\Desktop
+root=cd %SRCROOT%
+omexservices=cd %SRCROOT%\omexservices
+olsdir=cd %SRCROOT%\ols
+omexshared=cd %SRCROOT%\omexshared
+omexregional=cd %SRCROOT%\omexregional
+omexstorage=cd %SRCROOT%\omexstorage
+osisvc=cd %SRCROOT%\osisvcdef
+culturesgen=cd %SRCROOT%\omexregional\tools\CulturesGen
+target=cd %TARGETROOT%\x64\debug
+target_services=cd %TARGETROOT%\x64\debug\omexservices\x-none
+tools=cd %SRCROOT%\omexservices\tools
+common=cd %SRCROOT%\omexservices\deployment\data\common
+setgenTool=cd %SRCROOT%\omexservices\extras\setgen
+hosts=gvim C:\Windows\System32\Drivers\etc\hosts
+environments=cd %TARGETROOT%\x64\debug\olssetup\en-us\setup\Deployment\Environments
+olsEnvironments=cd %SRCROOT%\..\Install\x64\debug\devhosted_ols\en-us\Deployment\Environments
+enlist=\\offdepot1\osetup\osetup.bat
+settings=cd %BUILDROOT%\x64\debug\omexshared\osidefinitions\objd\x64
+deploymentData=cd %SRCROOT%\omexservices\deployment\data
+extras=cd %SRCROOT%\omexservices\extras
+output=start C:\Users\syhamza\AppData\Local\Temp\omexservices\extras\setgen
+deploymentLogs=start C:\Users\syhamza\AppData\Local\dftmp\Resources\
+
+logShared=gvim %SRCROOT%\omexshared\ut.x64.debug.log
+logServices=gvim %SRCROOT%\omexservices\ut.x64.debug.log
+logRoot=gvim %SRCROOT%\ut.x64.debug.log
+
+dev_services=devenv %SRCROOT%\omexservices\omexservices.sln
+dev_shared=devenv %SRCROOT%\omexshared\omexshared.sln
+dev_ols=devenv %SRCROOT%\ols\ols.sln
+dev_regional=devenv %SRCROOT%\omexregional\omexregional.sln
+dev_culturesgen=devenv %SRCROOT%\omexregional\tools\CulturesGen\CulturesGen\CulturesGen.csproj
+dev_storage=devenv %SRCROOT%\omexstorage\omexstorage.sln
+dev_setgen=devenv %SRCROOT%\omexservices\extras\setgen\setgen.csproj
+
+dev_osi=cd %SRCROOT%\otools\bin\osi
+nuke=%SRCROOT%\otools\bin\osi\devosi nuke
+deploy=%SRCROOT%\otools\bin\osi\devosi deploydev
+deploy_dir=cd %SRCROOT%\otools\bin\osi
+findprocess=%SRCROOT%\otools\bin\osi\devosi findiisprocess
+uls=%SRCROOT%\otools\bin\osi\devosi uls
+
+check=ocheck -a -f -user -setup
+
+edit=sd edit $1 & subl $1
+open_appshome=start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -incognito "https://syhamza-dev.osi.office-int.com/appshome.aspx"
+open_myaccount=start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "https://syhamza-dev.osi.office-int.com/myaccount/home.aspx"
+open_myaccount_I=start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -incognito "https://syhamza-dev.osi.office-int.com/myaccount/home.aspx"
+open_storefrontpage=start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -incognito "https://syhamza-dev.osi.office-int.com/storefront.aspx"
+open_storefrontpage=start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -incognito "https://syhamza-dev.osi.office-int.com/storefront.aspx"
+open_diagnostics=start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "https://stores.officeppe.com/diagnostics"
+open_diagnostics_I=start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -incognito "https://stores.officeppe.com/diagnostics"
+
+sync=ohome sync clean
+synchot=ohome sync clean hot
+build=obuild debug
+buildAll=ohome build debug nobackup noqtstore nosvcstop
+buildShip=ohome nosync noocheck nobackup nooacr nocleansrc ship x64
+
+buildpr=prbuild config -s Images omex_hosted & prbuild config -s Flavors ship & prbuild config -s Platforms x64 & prbuild config -s Symbols yes & prbuild config -s Sources custom & prbuild config -s Notifications yes & prbuild config -s ReleasePath private \\SYHAMZA-DEVMAIN\Users\syhamza\Documents\SharedBuilds
+
+buildprols=prbuild config -s Images ols_hosted & prbuild config -s Flavors ship & prbuild config -s Platforms x64 & prbuild config -s Symbols yes & prbuild config -s Sources custom & prbuild config -s Notifications yes & prbuild config -s ReleasePath private \\SYHAMZA-DEVMAIN\Users\syhamza\Documents\SharedBuilds
+
+prpublish_ols=prbuild publish -i devhosted_ols -f ship
+buildRelhostedOls = ohome nosync noocheck nobackup nooacr nocleansrc relhosted_ols ship x64
+
+prpublishOls = prbuild publish -i relhosted_ols -f ship
+
+warmDeploy =\\SYHAMZA-DEVMAIN\Users\syhamza\Documents\SharedBuilds\$1\install\x64\ship\relhosted\ols\en-us\Tools\WarmDeploy\warmdeploy.cmd -SpecFilePath "\\SYHAMZA-DEVMAIN\Users\syhamza\Documents\SharedBuilds\$1\install\x64\ship\relhosted\ols\en-us\WARM\Environments\Ols-Edog-Cloud\DeploymentSpec-AllRegions.xml"
+
+buddyBuild=quickbuild buddy -c $1
+
+sb = sublime_text $1
+subRoot = subl %SRCROOT%
+subSvcDef = subl %SRCROOT%\osisvcdef
+subBuild = subl %BUILDROOT%\x64\debug
+ols1 = D: && cd D:\GitOls1\Ols
+intools = cd %SRCROOT%\..\.corext\gen\inpath
+myenv = %SRCROOT%\..\tools\path1st\myenv.cmd
+clientScn = cd %SRCROOT%\olstest\tests\OlsApiScenarioTests\OlsApiScenarioTests\ClientApiTests
+svcdef = cd %SRCROOT%\osisvcdef\$1\src\ServiceDefinitions\$1\
+targeted = cd %TARGETROOT%\x64\debug\osiedgen_$1\x-none\EnvironmentDescriptionFiles\
+e = sd edit $1
+copycmd = copy C:\Users\syhamza\cmd_autorun.cmd %SRCROOT%
+
+deployProd = echo "ols deploy production <build number> -ServicePoolFilterIn ncus-000"
+deployWarm = echo "\\o\tenants\ols\16.0.7208.1850\releases\hosted\en-us\16.0.7208.1850_Osiolschina_none_ship_x64_en-us\tools\warmdeploy\warmdeploy.cmd \\o\tenants\ols\16.0.7208.1850\releases\hosted\en-us\16.0.7208.1850_Osiolschina_none_ship_x64_en-us\warm\environments\OlsCn-ChinaProduction-Cloud\DeploymentSpec-AllRegions.xml -Notes 'Triggered via WARM script'"

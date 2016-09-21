@@ -26,22 +26,22 @@ function ToRoot{
 set-alias root ToRoot
 
 function OpenAliasSetter{
-	subl C:\Users\syhamza\AliasSetter.ps1
+	subl C:\MyRepo\Tools\AliasSetter.ps1
 }
 set-alias open_aliasSetter OpenAliasSetter
 
 function RunAliasSetter{
-	C:\Users\syhamza\AliasSetter.ps1
+	C:\MyRepo\Tools\AliasSetter.ps1
 }
 set-alias run_aliasSetter RunAliasSetter
 
 function InitEnv{
-	C:\Users\syhamza\PowerShellEnvironmentSetter.ps1
+	C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1
 }
 set-alias init_env InitEnv
 
 function OpenEnvSetter{
-	subl C:\Users\syhamza\PowerShellEnvironmentSetter.ps1
+	subl C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1
 }
 set-alias open_envsetter OpenEnvSetter
 
@@ -55,3 +55,8 @@ function OpenResearch{
 	. $Env:otools\bin\research
 }
 set-alias research OpenResearch
+
+function ToMyTools{
+	cd C:\MyRepo\Tools
+}
+set-alias mytools ToMyTools
