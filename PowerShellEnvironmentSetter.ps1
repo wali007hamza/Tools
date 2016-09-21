@@ -19,7 +19,4 @@ Get-Content $tempFile | Foreach-Object{
 	}
 }
 
-# Other Env Variables
-$env:PATH += ";C:\MyRepo\Tools"
-
 Remove-Item $tempFile

@@ -1,3 +1,7 @@
+# EnvironmentVariables
+
+$env:PATH += ";C:\MyRepo\Tools"
+
 #Development Aliases
 
 function OpenOls{
@@ -15,10 +19,14 @@ function SvcDefDir{
 }
 set-alias svcdef_dir SvcDefDir
 
-function EnvironmentsDir{
+function OlsEnvironmentsDir{
 	cd $Env:targetroot\x64\debug\olssetup\en-us\setup\deployment\environments
 }
-set-alias env_dir EnvironmentsDir
+set-alias olsenv_dir OlsEnvironmentsDir
+
+function EnvironmentsDir($project){
+	cd $Env:targetroot\x64\debug\"osiedgen_$($project)"\x-none\EnvironmentDescriptionFiles
+}
 
 function ToRoot{
 	cd $env:srcroot
