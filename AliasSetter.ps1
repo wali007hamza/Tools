@@ -30,10 +30,7 @@ function OpenAliasSetter{
 }
 set-alias open_aliasSetter OpenAliasSetter
 
-function RunAliasSetter{
-	C:\MyRepo\Tools\AliasSetter.ps1
-}
-set-alias run_aliasSetter RunAliasSetter
+set-alias run_aliasSetter C:\MyRepo\Tools\AliasSetter.ps1
 
 function InitEnv{
 	C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1
