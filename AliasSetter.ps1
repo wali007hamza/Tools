@@ -57,3 +57,5 @@ function ToMyTools{
 	cd C:\MyRepo\Tools
 }
 set-alias mytools ToMyTools
+
+set-alias dev devenv
