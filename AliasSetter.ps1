@@ -42,6 +42,11 @@ function ToRoot{
 }
 set-alias root ToRoot
 
+function ToRepo{
+    cd $env:InetRoot
+}
+set-alias repo ToRepo
+
 function OpenAliasSetter{
     subl C:\MyRepo\Tools\AliasSetter.ps1
 }
