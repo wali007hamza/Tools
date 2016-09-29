@@ -86,3 +86,20 @@ function ToMyTools{
 set-alias mytools ToMyTools
 
 set-alias dev devenv
+
+function omex_cmd{
+    cmd /c start C:\Users\syhamza\Desktop\Omex.lnk
+}
+
+function ols1_cmd{
+    cmd /c start C:\Users\syhamza\Desktop\ols.lnk
+}
+
+function ols2_cmd{
+    cmd /c start 'C:\Users\syhamza\Desktop\ols(2).lnk'
+}
+
+function ols3_cmd{
+    cmd /c start 'C:\Users\syhamza\Desktop\ols(3).lnk'
+}
+
