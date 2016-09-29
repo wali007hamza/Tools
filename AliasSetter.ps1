@@ -75,6 +75,11 @@ function OpenResearch{
 }
 set-alias research OpenResearch
 
+function OpenOtoolsBin{
+    cd $Env:otools\bin
+}
+set-alias otools_dir OpenOtoolsBin
+
 function ToMyTools{
     cd C:\MyRepo\Tools
 }
