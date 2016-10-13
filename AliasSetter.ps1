@@ -28,6 +28,10 @@ function OlsTarget{
     cd $Env:targetroot\x64\debug\ols\x-none
 }
 
+function TargetRoot($project){
+    cd $Env:targetroot\x64\debug\$project\x-none
+}
+
 function OlsEnvironmentsDir{
     cd $Env:targetroot\x64\debug\olssetup\en-us\setup\deployment\environments
 }
@@ -101,5 +105,10 @@ function ols2_cmd{
 
 function ols3_cmd{
     cmd /c start 'C:\Users\syhamza\Desktop\ols(3).lnk'
+}
+
+function gitPull{
+    $x = cmd /c git rev-parse --abbrev-ref HEAD 2>&1
+    cmd /c git checkout develop | git pull | git checkout $x
 }
 
