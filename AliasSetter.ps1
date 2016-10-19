@@ -112,3 +112,11 @@ function gitPull{
     cmd /c git checkout develop | git pull | git checkout $x
 }
 
+function sub_ols{
+    subl $Env:SrcRoot\ols
+}
+
+function ols_dir{
+    cd $Env:SrcRoot\ols
+}
+
