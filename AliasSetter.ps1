@@ -120,3 +120,13 @@ function ols_dir{
     cd $Env:SrcRoot\ols
 }
 
+function Copy_Subl_ToRepo([string]$username){
+    copy "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\Preferences.sublime-settings" "C:\MyRepo\Tools\Sublime"
+    copy "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\Default (Windows).sublime-keymap" "C:\MyRepo\Tools\Sublime"
+}
+
+function Copy_Subl_ToFolder([string]$username){
+    copy "C:\MyRepo\Tools\Sublime\Preferences.sublime-settings" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\"
+    copy "C:\MyRepo\Tools\Sublime\Default (Windows).sublime-keymap" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\"
+}
+
