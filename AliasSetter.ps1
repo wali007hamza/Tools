@@ -130,3 +130,6 @@ function Copy_Subl_ToFolder([string]$username){
     copy "C:\MyRepo\Tools\Sublime\Default (Windows).sublime-keymap" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\"
 }
 
+function osidef{
+    cd $Env:SrcRoot\ols\OsiDefinitions
+}
