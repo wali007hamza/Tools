@@ -133,3 +133,12 @@ function Copy_Subl_ToFolder([string]$username){
 function osidef{
     cd $Env:SrcRoot\ols\OsiDefinitions
 }
+
+function build_svcdef{
+    $x = cmd /c cd
+    cd $Env:srcroot\osisvcdef
+    cmd /c quickbuild
+    cd $Env:srcroot\osiedgen
+    quickbuild
+    cd $x
+}
