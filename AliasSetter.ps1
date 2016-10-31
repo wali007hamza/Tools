@@ -142,3 +142,7 @@ function build_svcdef{
     quickbuild
     cd $x
 }
+
+function open_ildasm{
+    . "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe"
+}
