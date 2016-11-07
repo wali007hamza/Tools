@@ -41,6 +41,10 @@ function EnvironmentsDir($project){
     cd $Env:targetroot\x64\debug\"osiedgen_$($project)"\x-none\EnvironmentDescriptionFiles
 }
 
+function ols_devmain(){
+    cmd /c start C:\Users\syhamza\Desktop\Office.lnk
+}
+
 function ToRoot{
     cd $env:srcroot
 }
