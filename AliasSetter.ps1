@@ -150,3 +150,7 @@ function build_svcdef{
 function open_ildasm{
     . "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe"
 }
+
+function deploy_gallatinEdog([string]$buildNumber){
+    cmd /c \\o\tenants\ols\${buildNumber}\shadow\store\x64\ship\olssetup\en-us\setup\Tools\WarmDeploy\WarmDeploy.cmd -SpecFilePath \\o\tenants\ols\${buildNumber}\releases\hosted\en-us\${buildNumber}_Osiolschina_none_ship_x64_en-us\WARM\Environments\OlsCn-ChinaEdog-Cloud\DeploymentSpec-AllRegions.xml -Notes "Triggered via Warm script"
+}
