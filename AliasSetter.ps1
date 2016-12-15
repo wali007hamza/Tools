@@ -111,6 +111,10 @@ function ols3_cmd{
     cmd /c start 'C:\Users\syhamza\Desktop\ols(3).lnk'
 }
 
+function ols4_cmd{
+    cmd /c start 'C:\Users\syhamza\Desktop\ols(4).lnk'
+}
+
 function gitPull{
     $x = cmd /c git rev-parse --abbrev-ref HEAD 2>&1
     cmd /c git checkout develop | git pull | git checkout $x
@@ -138,6 +142,10 @@ function osidef{
     cd $Env:SrcRoot\ols\OsiDefinitions
 }
 
+function Desktop{
+    cd C:\Users\syhamza\desktop
+}
+
 function build_svcdef{
     $x = cmd /c cd
     cd $Env:srcroot\osisvcdef
@@ -153,4 +161,8 @@ function open_ildasm{
 
 function deploy_gallatinEdog([string]$buildNumber){
     cmd /c \\o\tenants\ols\${buildNumber}\shadow\store\x64\ship\olssetup\en-us\setup\Tools\WarmDeploy\WarmDeploy.cmd -SpecFilePath \\o\tenants\ols\${buildNumber}\releases\hosted\en-us\${buildNumber}_Osiolschina_none_ship_x64_en-us\WARM\Environments\OlsCn-ChinaEdog-Cloud\DeploymentSpec-AllRegions.xml -Notes "Triggered via Warm script"
+}
+
+function deploy_PREDog([string]$buildNumber){
+    cmd /c \\ocentral\Build\VSTSCICDPrototype\staging\olsPR\${buildNumber}\target\x64\Ship\olssetup\en-us\setup\Tools\WarmDeploy\WarmDeploy.cmd -SpecFilePath \\ocentral\Build\VSTSCICDPrototype\staging\olsPR\${buildNumber}\target\x64\Ship\olssetup\en-us\setup\WARM\Environments\OlsCn-ChinaEdog-Cloud\DeploymentSpec-AllRegions.xml -Notes "Triggered via Warm script"
 }
