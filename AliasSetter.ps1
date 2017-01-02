@@ -9,6 +9,7 @@ function OpenOls{
 }
 set-alias dev_ols OpenOls
 
+function OpenSvcDef{
     devenv $Env:srcroot\osisvcdef\ols\src\servicedefinitions\ols\ols.sln
 }
 set-alias dev_svcdef OpenSvcDef
