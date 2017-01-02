@@ -9,7 +9,6 @@ function OpenOls{
 }
 set-alias dev_ols OpenOls
 
-function OpenSvcDef{
     devenv $Env:srcroot\osisvcdef\ols\src\servicedefinitions\ols\ols.sln
 }
 set-alias dev_svcdef OpenSvcDef
@@ -139,7 +138,7 @@ function Copy_Subl_ToRepo([string]$username){
 
 function Copy_Subl_ToFolder([string]$username){
     copy "C:\MyRepo\Tools\Sublime\Preferences.sublime-settings" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\"
-    copy "C:\MyRepo\Tools\Sublime\Default (Windows).sublime-keymap" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\"
+    copy "C:\MyRepo\Tools\Sublime\Default (Windows).sublime-keymap" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\"
 }
 
 function Copy_ConEmu_ToRepo([string]$username){
