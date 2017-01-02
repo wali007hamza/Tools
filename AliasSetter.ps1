@@ -88,6 +88,10 @@ function OpenOtoolsBin{
 }
 set-alias otools_dir OpenOtoolsBin
 
+function sub_otools{
+    subl $Env:SrcRoot\otools
+}
+
 function ToMyTools{
     cd C:\MyRepo\Tools
 }
@@ -164,5 +168,5 @@ function deploy_gallatinEdog([string]$buildNumber){
 }
 
 function deploy_PREDog([string]$buildNumber){
-    cmd /c \\ocentral\Build\VSTSCICDPrototype\staging\olsPR\${buildNumber}\target\x64\Ship\olssetup\en-us\setup\Tools\WarmDeploy\WarmDeploy.cmd -SpecFilePath \\ocentral\Build\VSTSCICDPrototype\staging\olsPR\${buildNumber}\target\x64\Ship\olssetup\en-us\setup\WARM\Environments\OlsCn-ChinaEdog-Cloud\DeploymentSpec-AllRegions.xml -Notes "Triggered via Warm script"
+    cmd /c \\ocentral\Build\VSTSCICDPrototype\staging\olsPR\${buildNumber}\target\x64\Ship\olssetup\en-us\setup\Tools\WarmDeploy\WarmDeploy.cmd \\ocentral\Build\VSTSCICDPrototype\staging\olsPR\${buildNumber}\target\x64\Ship\olssetup\en-us\setup\WARM\Environments\Ols-EDog-Cloud\DeploymentSpec-AllRegions.xml -Notes "Triggered via Warm script"
 }

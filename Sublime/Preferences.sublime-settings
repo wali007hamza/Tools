@@ -1,10 +1,12 @@
 {
 	"draw_white_space": "all",
 	"font_size": 9,
+	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"remember_open_files": false,
 	"tab_size": 4,
 	"theme": "predawn.sublime-theme",
 	"translate_tabs_to_spaces": true,
