@@ -147,7 +147,7 @@ function Copy_ConEmu_ToRepo([string]$username){
 }
 
 function Copy_ConEmu_ToFolder([string]$username){
-    copy "C:\MyRepo\Tools\ConEmu\ConEmu.xml" "C:\Users\{$username}\AppData\Roaming\ConEmu.xml"
+    copy "C:\MyRepo\Tools\ConEmu\ConEmu.xml" "C:\Users\${username}\AppData\Roaming\ConEmu.xml"
 }
 
 function osidef{
