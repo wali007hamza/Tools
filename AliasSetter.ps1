@@ -142,6 +142,14 @@ function Copy_Subl_ToFolder([string]$username){
     copy "C:\MyRepo\Tools\Sublime\Default (Windows).sublime-keymap" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\"
 }
 
+function Copy_ConEmu_ToRepo([string]$username){
+    copy "C:\Users\${username}\AppData\Roaming\ConEmu.xml" "C:\MyRepo\Tools\ConEmu"
+}
+
+function Copy_ConEmu_ToFolder([string]$username){
+    copy "C:\MyRepo\Tools\ConEmu\ConEmu.xml" "C:\Users\{$username}\AppData\Roaming\ConEmu.xml"
+}
+
 function osidef{
     cd $Env:SrcRoot\ols\OsiDefinitions
 }
