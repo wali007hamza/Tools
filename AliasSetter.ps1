@@ -50,6 +50,10 @@ function ToRoot{
 }
 set-alias root ToRoot
 
+function ToDebugger{
+    cd "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64"
+}
+
 function ToRepo{
     cd $env:InetRoot
 }
@@ -59,6 +63,10 @@ function OpenAliasSetter{
     subl C:\MyRepo\Tools\AliasSetter.ps1
 }
 set-alias open_aliasSetter OpenAliasSetter
+
+function CodeOpenAliasSetter{
+    code C:\MyRepo\Tools\AliasSetter.ps1
+}
 
 set-alias run_aliasSetter C:\MyRepo\Tools\AliasSetter.ps1
 
@@ -96,6 +104,10 @@ function ToMyTools{
     cd C:\MyRepo\Tools
 }
 set-alias mytools ToMyTools
+
+function myrepo{
+    cd C:\MyRepo
+}
 
 set-alias dev devenv
 
