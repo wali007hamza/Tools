@@ -56,7 +56,7 @@ function ToRepo{
 set-alias repo ToRepo
 
 function OpenAliasSetter{
-    subl C:\MyRepo\Tools\AliasSetter.ps1
+    code C:\MyRepo\Tools\AliasSetter.ps1
 }
 set-alias open_aliasSetter OpenAliasSetter
 
@@ -68,7 +68,7 @@ function InitEnv{
 set-alias init_env InitEnv
 
 function OpenEnvSetter{
-    subl C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1
+    code C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1
 }
 set-alias open_envsetter OpenEnvSetter
 
@@ -89,7 +89,7 @@ function OpenOtoolsBin{
 set-alias otools_dir OpenOtoolsBin
 
 function sub_otools{
-    subl $Env:SrcRoot\otools
+    code $Env:SrcRoot\otools
 }
 
 function ToMyTools{
@@ -124,8 +124,18 @@ function gitPull{
     cmd /c git checkout develop | git pull | git checkout $x
 }
 
+function DeleteBranch($prefix){
+    $branches = (git branch) -split "\n"
+    foreach($x in $branches){
+        if($x.Contains($prefix)){
+            Write-Host $x
+            git branch -D $x.Trim()
+        }
+    }
+}
+
 function sub_ols{
-    subl $Env:SrcRoot\ols
+    code $Env:SrcRoot\ols
 }
 
 function ols_dir{
@@ -133,13 +143,13 @@ function ols_dir{
 }
 
 function Copy_Subl_ToRepo([string]$username){
-    copy "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\Preferences.sublime-settings" "C:\MyRepo\Tools\Sublime"
-    copy "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\Default (Windows).sublime-keymap" "C:\MyRepo\Tools\Sublime"
+    copy "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\Preferences.codeime-settings" "C:\MyRepo\Tools\Sublime"
+    copy "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\Default (Windows).codeime-keymap" "C:\MyRepo\Tools\Sublime"
 }
 
 function Copy_Subl_ToFolder([string]$username){
-    copy "C:\MyRepo\Tools\Sublime\Preferences.sublime-settings" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\"
-    copy "C:\MyRepo\Tools\Sublime\Default (Windows).sublime-keymap" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\"
+    copy "C:\MyRepo\Tools\Sublime\Preferences.codeime-settings" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\"
+    copy "C:\MyRepo\Tools\Sublime\Default (Windows).codeime-keymap" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\"
 }
 
 function Copy_ConEmu_ToRepo([string]$username){
@@ -167,8 +177,23 @@ function build_svcdef{
     cd $x
 }
 
+$pathToIldasm = "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe";
+$pathToIlasm = "C:\Windows\Microsoft.NET\Framework\v4.0.30319\ilasm.exe";
+
 function open_ildasm{
-    . "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe"
+    cmd /c $pathToIldasm
+}
+
+function open_ilasm{
+    cmd /c $pathToIlasm
+}
+
+function sign_assembly([string]$assemblyName, [string]$snkPath){
+    $assemblyIlName = "${assemblyName}.il";
+    $assemblyDllName = "${assemblyName}.dll";
+
+    cmd /c $pathToIldasm /all /typelist /out=$assemblyIlName $assemblyDllName
+    cmd /c $pathToIlasm /dll /optimize /key=$snkPath $assemblyIlName
 }
 
 function deploy_gallatinEdog([string]$buildNumber){
@@ -176,5 +201,5 @@ function deploy_gallatinEdog([string]$buildNumber){
 }
 
 function deploy_PREDog([string]$buildNumber){
-    cmd /c \\ocentral\Build\VSTSCICDPrototype\staging\olsPR\${buildNumber}\target\x64\Ship\olssetup\en-us\setup\Tools\WarmDeploy\WarmDeploy.cmd \\ocentral\Build\VSTSCICDPrototype\staging\olsPR\${buildNumber}\target\x64\Ship\olssetup\en-us\setup\WARM\Environments\Ols-EDog-Cloud\DeploymentSpec-AllRegions.xml -Notes "Triggered via Warm script"
+    cmd /c \\ocentral\Build\VSTSCICDPrototype\ols\official\${buildNumber}\target\x64\Ship\olssetup\en-us\setup\Tools\WarmDeploy\WarmDeploy.cmd \\ocentral\Build\VSTSCICDPrototype\ols\official\${buildNumber}\target\x64\Ship\olssetup\en-us\setup\WARM\Environments\Ols-EDog-Cloud\DeploymentSpec-AllRegions.xml -Notes "Triggered via Warm script"
 }
