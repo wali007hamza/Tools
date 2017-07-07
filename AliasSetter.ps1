@@ -50,6 +50,10 @@ function ToRoot{
 }
 set-alias root ToRoot
 
+function ToDebugger{
+    cd "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64"
+}
+
 function ToRepo{
     cd $env:InetRoot
 }
@@ -59,6 +63,10 @@ function OpenAliasSetter{
     code C:\MyRepo\Tools\AliasSetter.ps1
 }
 set-alias open_aliasSetter OpenAliasSetter
+
+function CodeOpenAliasSetter{
+    code C:\MyRepo\Tools\AliasSetter.ps1
+}
 
 set-alias run_aliasSetter C:\MyRepo\Tools\AliasSetter.ps1
 
@@ -96,6 +104,10 @@ function ToMyTools{
     cd C:\MyRepo\Tools
 }
 set-alias mytools ToMyTools
+
+function myrepo{
+    cd C:\MyRepo
+}
 
 set-alias dev devenv
 
@@ -148,8 +160,8 @@ function Copy_Subl_ToRepo([string]$username){
 }
 
 function Copy_Subl_ToFolder([string]$username){
-    copy "C:\MyRepo\Tools\Sublime\Preferences.codeime-settings" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\"
-    copy "C:\MyRepo\Tools\Sublime\Default (Windows).codeime-keymap" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\"
+    copy "C:\MyRepo\Tools\Sublime\Preferences.sublime-settings" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\"
+    copy "C:\MyRepo\Tools\Sublime\Default (Windows).sublime-keymap" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\"
 }
 
 function Copy_ConEmu_ToRepo([string]$username){
