@@ -9,6 +9,10 @@ function OpenOls{
 }
 set-alias dev_ols OpenOls
 
+function scripts_dir{
+    cd $Env:SrcRoot\ols\Tools\Scripts
+}
+
 function OpenSvcDef{
     devenv $Env:srcroot\osisvcdef\ols\src\servicedefinitions\ols\ols.sln
 }
