@@ -32,6 +32,10 @@ function OlsTarget{
     cd $Env:targetroot\x64\debug\ols\x-none
 }
 
+function DeleteTarget{
+    Remove-Item $Env:targetroot -Force -Recurse
+}
+
 function TargetRoot($project){
     cd $Env:targetroot\x64\debug\$project\x-none
 }
