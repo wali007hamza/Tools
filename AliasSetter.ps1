@@ -4,6 +4,10 @@ $env:PATH += ";C:\MyRepo\Tools"
 
 #Development Aliases
 
+function hack_dir{
+    cd C:\Users\syhamza\Documents\Hackathon
+}
+
 function OpenOls{
     devenv $Env:srcroot\ols\ols.sln
 }
