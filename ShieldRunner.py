@@ -9,7 +9,7 @@ def CallShieldApi(puid, longPuid):
     out, err = p.communicate()
     return out
 
-with open("C:\\Users\\syhamza\\desktop\\Copy of Possible Miscommunication OLS 7-27.csv") as file:
+with open("C:\\Users\\syhamza\\desktop\\possible_miscomm.csv") as file:
     content = file.readlines()
 
 listOfPuids = [x.strip().split(",")[0] for x in content]
@@ -17,11 +17,15 @@ listOfPuids = [x.strip().split(",")[0] for x in content]
 mapOfResponse = {}
 for puid in listOfPuids:
     decimalRegex = re.compile(r'[^\d.]+')
-    longPuid = int(decimalRegex.sub('', puid))
-    hexPuid = hex(longPuid).rstrip("L").lstrip("0x").upper()
-    response = CallShieldApi(hexPuid.strip(), longPuid).decode("utf-8").replace('\r','')
-    response = response.replace('\n',',')
-    mapOfResponse[longPuid] = response
+    try:
+        longPuid = int(decimalRegex.sub('', puid))
+        hexPuid = hex(longPuid).rstrip("L").lstrip("0x").upper()
+        response = CallShieldApi(hexPuid.strip(), longPuid).decode("utf-8").replace('\r','')
+        response = response.replace('\n',',')
+        mapOfResponse[longPuid] = response
+    except Exception as ex:
+        print(ex)
+        print(puid)
 
 print(mapOfResponse)
 
