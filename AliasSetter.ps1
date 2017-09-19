@@ -1,22 +1,20 @@
 # EnvironmentVariables
 
-$env:PATH += ";C:\MyRepo\Tools"
+$env:PATH += "C:\MyRepo\Tools"
 
 #Development Aliases
-
-function hack_dir{
-    cd C:\Users\syhamza\Documents\Hackathon
-}
 
 function OpenOls{
     devenv $Env:srcroot\ols\ols.sln
 }
 set-alias dev_ols OpenOls
 
+function dev_15($fileName){
+    cmd /c start "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" $fileName
+}
 function scripts_dir{
     cd $Env:SrcRoot\ols\Tools\Scripts
 }
-
 function OpenSvcDef{
     devenv $Env:srcroot\osisvcdef\ols\src\servicedefinitions\ols\ols.sln
 }
@@ -166,24 +164,6 @@ function ols_dir{
     cd $Env:SrcRoot\ols
 }
 
-function Copy_Subl_ToRepo([string]$username){
-    copy "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\Preferences.codeime-settings" "C:\MyRepo\Tools\Sublime"
-    copy "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\Default (Windows).codeime-keymap" "C:\MyRepo\Tools\Sublime"
-}
-
-function Copy_Subl_ToFolder([string]$username){
-    copy "C:\MyRepo\Tools\Sublime\Preferences.sublime-settings" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\"
-    copy "C:\MyRepo\Tools\Sublime\Default (Windows).sublime-keymap" "C:\Users\${username}\AppData\Roaming\Sublime Text 3\Packages\User\"
-}
-
-function Copy_ConEmu_ToRepo([string]$username){
-    copy "C:\Users\${username}\AppData\Roaming\ConEmu.xml" "C:\MyRepo\Tools\ConEmu"
-}
-
-function Copy_ConEmu_ToFolder([string]$username){
-    copy "C:\MyRepo\Tools\ConEmu\ConEmu.xml" "C:\Users\${username}\AppData\Roaming\ConEmu.xml"
-}
-
 function osidef{
     cd $Env:SrcRoot\ols\OsiDefinitions
 }
@@ -201,8 +181,8 @@ function build_svcdef{
     cd $x
 }
 
-$pathToIldasm = "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe";
-$pathToIlasm = "C:\Windows\Microsoft.NET\Framework\v4.0.30319\ilasm.exe";
+$pathToIldasm = "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\ildasm.exe";
+$pathToIlasm = "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe";
 
 function open_ildasm{
     cmd /c $pathToIldasm
