@@ -9,6 +9,10 @@ function OpenOls{
 }
 set-alias dev_ols OpenOls
 
+function host_dir{
+    cd C:\Windows\System32\drivers\etc
+}
+
 function dev_15($fileName){
     cmd /c start "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" $fileName
 }
