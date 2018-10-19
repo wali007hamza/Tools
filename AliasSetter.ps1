@@ -2,6 +2,11 @@
 
 $env:PATH += "C:\MyRepo\Tools"
 
+$computerName = get-childitem env:computername
+if($computerName.Value -eq "SYHAMZA-MACHINE"){
+    $env:NUGET_PACKAGES="d:\nuget\packages"
+}
+
 #Development Aliases
 
 function OpenOls{
@@ -15,6 +20,10 @@ function host_dir{
 
 function lumos_root{
     cd ..\..
+}
+
+function lumos_dir{
+    cd src\Lumos
 }
 
 function dev_15($fileName){
