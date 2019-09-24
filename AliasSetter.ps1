@@ -1,6 +1,6 @@
 # EnvironmentVariables
 
-$env:PATH += "C:\MyRepo\Tools"
+$env:PATH += ";C:\MyRepo\Tools"
 
 $computerName = get-childitem env:computername
 if($computerName.Value -eq "SYHAMZA-MACHINE"){
@@ -9,8 +9,11 @@ if($computerName.Value -eq "SYHAMZA-MACHINE"){
 
 #Development Aliases
 
+function dev_17($fileName){
+    cmd /c start "E:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE" $fileName
+}
 function OpenOls{
-    devenv $Env:srcroot\ols\ols.sln
+    dev_17 $Env:srcroot\ols\ols.sln
 }
 set-alias dev_ols OpenOls
 
@@ -26,9 +29,6 @@ function lumos_dir{
     cd src\Lumos
 }
 
-function dev_15($fileName){
-    cmd /c start "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" $fileName
-}
 function scripts_dir{
     cd $Env:SrcRoot\ols\Tools\Scripts
 }
