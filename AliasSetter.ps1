@@ -17,6 +17,7 @@ function Work {
 function dev_17($fileName){
     cmd /c start "E:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE" $fileName
 }
+
 function OpenOls{
     dev_17 $Env:srcroot\ols\ols.sln
 }
@@ -27,18 +28,25 @@ function host_dir {
 }
 
 function lumos_root {
-    cd ..\..
+    cd $Env:OloobeRoot
 }
 
 function lumos_dir {
-    cd src\Lumos
+    cd $Env:LumosSolutionDir
 }
 
+function dev_lumos {
+    devenv $Env:LumosSolutionDir\Lumos.sln
+}
+
+function code_oloobe {
+    code $Env:OloobeRoot
+}
 function scripts_dir{
     cd $Env:SrcRoot\ols\Tools\Scripts
 }
 function OpenSvcDef {
-    devenv $Env:srcroot\osisvcdef\ols\src\servicedefinitions\ols\ols.sln
+    dev_17 $Env:srcroot\osisvcdef\ols\src\servicedefinitions\ols\ols.sln
 }
 set-alias dev_svcdef OpenSvcDef
 
