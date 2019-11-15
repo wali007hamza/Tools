@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-01-23 10:50:06" build="161206">
+		<key name=".Vanilla" modified="2019-11-14 18:40:23" build="191012">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
-			<value name="StartTasksName" type="string" data="{Ols1 PS}"/>
+			<value name="StartTasksName" type="string" data="{Oloobe1}"/>
 			<value name="StartFarFolders" type="hex" data="00"/>
 			<value name="StartFarEditors" type="hex" data="00"/>
 			<value name="StartCreateDelay" type="ulong" data="100"/>
@@ -49,8 +49,8 @@
 			<value name="PopBackColorIdx" type="hex" data="10"/>
 			<value name="ExtendFonts" type="hex" data="00"/>
 			<value name="ExtendFontNormalIdx" type="hex" data="01"/>
-			<value name="ExtendFontBoldIdx" type="hex" data="0c"/>
-			<value name="ExtendFontItalicIdx" type="hex" data="0d"/>
+			<value name="ExtendFontBoldIdx" type="hex" data="0C"/>
+			<value name="ExtendFontItalicIdx" type="hex" data="0D"/>
 			<value name="CursorTypeActive" type="dword" data="000232c1"/>
 			<value name="CursorTypeInactive" type="dword" data="00823283"/>
 			<value name="ClipboardDetectLineEnd" type="hex" data="01"/>
@@ -66,7 +66,7 @@
 			<value name="VividColors" type="hex" data="01"/>
 			<value name="FadeInactive" type="hex" data="01"/>
 			<value name="FadeInactiveLow" type="hex" data="00"/>
-			<value name="FadeInactiveHigh" type="hex" data="d0"/>
+			<value name="FadeInactiveHigh" type="hex" data="D0"/>
 			<value name="ConVisible" type="hex" data="00"/>
 			<value name="UseInjects" type="hex" data="01"/>
 			<value name="SetDefaultTerminal" type="hex" data="00"/>
@@ -96,21 +96,23 @@
 			<value name="JumpListAutoUpdate" type="hex" data="01"/>
 			<value name="SaveCmdHistory" type="hex" data="01"/>
 			<value name="CmdLineHistory" type="multi">
+				<line data="{Oloobe2}"/>
+				<line data="{Oloobe1}"/>
+				<line data="{Ols1 PS}"/>
+				<line data="{Ols2 PS}"/>
 				<line data="{Ols4 PS}"/>
 				<line data="{Ols3 PS}"/>
 				<line data="{Omex1 PS}"/>
-				<line data="{Ols2 PS}"/>
 				<line data="{VSTS}"/>
 				<line data="{Ols5PS}"/>
 				<line data="{Office365}"/>
-				<line data="{Ols1 PS}"/>
 				<line data="{Shells::PowerShell (Admin)}"/>
 				<line data="{OlsDocs}"/>
 				<line data="{Ols1}"/>
 				<line data="{Ols3}"/>
 				<line data="{Ols2}"/>
 			</value>
-			<value name="SingleInstance" type="hex" data="01"/>
+			<value name="SingleInstance" type="hex" data="00"/>
 			<value name="ShowHelpTooltips" type="hex" data="01"/>
 			<value name="Multi" type="hex" data="01"/>
 			<value name="Multi.ShowButtons" type="hex" data="01"/>
@@ -135,7 +137,7 @@
 			<value name="FontName" type="string" data="Consolas"/>
 			<value name="FontName2" type="string" data="Consolas"/>
 			<value name="FontAutoSize" type="hex" data="00"/>
-			<value name="FontSize" type="ulong" data="13"/>
+			<value name="FontSize" type="ulong" data="14"/>
 			<value name="FontSizeX" type="ulong" data="0"/>
 			<value name="FontUseDpi" type="hex" data="01"/>
 			<value name="FontUseUnits" type="hex" data="01"/>
@@ -149,13 +151,13 @@
 			<value name="CompressLongStrings" type="hex" data="01"/>
 			<value name="BackGround Image show" type="hex" data="00"/>
 			<value name="BackGround Image" type="string" data="c:\back.bmp"/>
-			<value name="bgImageDarker" type="hex" data="ff"/>
+			<value name="bgImageDarker" type="hex" data="FF"/>
 			<value name="bgImageColors" type="dword" data="ffffffff"/>
 			<value name="bgOperation" type="hex" data="00"/>
 			<value name="bgPluginAllowed" type="hex" data="01"/>
-			<value name="AlphaValue" type="hex" data="fa"/>
+			<value name="AlphaValue" type="hex" data="FA"/>
 			<value name="AlphaValueSeparate" type="hex" data="00"/>
-			<value name="AlphaValueInactive" type="hex" data="ff"/>
+			<value name="AlphaValueInactive" type="hex" data="FF"/>
 			<value name="UserScreenTransparent" type="hex" data="00"/>
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
@@ -164,11 +166,11 @@
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="WindowMode" type="dword" data="00000520"/>
-			<value name="ConWnd X" type="long" data="227"/>
+			<value name="ConWnd X" type="long" data="3639"/>
 			<value name="ConWnd Y" type="long" data="0"/>
-			<value name="LastMonitor" type="string" data="0,0,2560,1400"/>
-			<value name="ConWnd Width" type="dword" data="0000003d"/>
-			<value name="ConWnd Height" type="dword" data="00000010"/>
+			<value name="LastMonitor" type="string" data="2560,0,5120,1400"/>
+			<value name="ConWnd Width" type="dword" data="00000050"/>
+			<value name="ConWnd Height" type="dword" data="00000019"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="QuakeStyle" type="hex" data="00"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
@@ -177,7 +179,7 @@
 			<value name="HideChildCaption" type="hex" data="01"/>
 			<value name="FocusInChildWindows" type="hex" data="01"/>
 			<value name="HideCaptionAlways" type="hex" data="00"/>
-			<value name="HideCaptionAlwaysFrame" type="hex" data="ff"/>
+			<value name="HideCaptionAlwaysFrame" type="hex" data="FF"/>
 			<value name="HideCaptionAlwaysDelay" type="ulong" data="2000"/>
 			<value name="HideCaptionAlwaysDisappear" type="ulong" data="2000"/>
 			<value name="DownShowHiddenMessage" type="hex" data="00"/>
@@ -214,11 +216,11 @@
 			<value name="CTS.ForceLocale" type="dword" data="00000000"/>
 			<value name="CTS.RBtnAction" type="hex" data="03"/>
 			<value name="CTS.MBtnAction" type="hex" data="00"/>
-			<value name="CTS.ColorIndex" type="hex" data="e0"/>
+			<value name="CTS.ColorIndex" type="hex" data="E0"/>
 			<value name="ClipboardConfirmEnter" type="hex" data="01"/>
 			<value name="ClipboardConfirmLonger" type="ulong" data="200"/>
 			<value name="FarGotoEditorOpt" type="hex" data="01"/>
-			<value name="FarGotoEditorPath" type="string" data="far.exe /e%1:%2 &quot;%3&quot;"/>
+			<value name="FarGotoEditorPath" type="string" data='far.exe /e%1:%2 "%3"'/>
 			<value name="HighlightMouseRow" type="hex" data="00"/>
 			<value name="HighlightMouseCol" type="hex" data="00"/>
 			<value name="FixFarBorders" type="hex" data="01"/>
@@ -227,9 +229,9 @@
 			<value name="ExtendUCharMap" type="hex" data="01"/>
 			<value name="EnhanceGraphics" type="hex" data="01"/>
 			<value name="EnhanceButtons" type="hex" data="00"/>
-			<value name="PartBrush75" type="hex" data="c8"/>
+			<value name="PartBrush75" type="hex" data="C8"/>
 			<value name="PartBrush50" type="hex" data="96"/>
-			<value name="PartBrush25" type="hex" data="5a"/>
+			<value name="PartBrush25" type="hex" data="5A"/>
 			<value name="PartBrushBlack" type="hex" data="20"/>
 			<value name="RightClick opens context menu" type="hex" data="02"/>
 			<value name="RightClickMacro2" type="string" data=""/>
@@ -330,7 +332,7 @@
 			<value name="TabCloseMacro" type="string" data=""/>
 			<value name="TabFontFace" type="string" data="Segoe UI"/>
 			<value name="TabFontCharSet" type="ulong" data="0"/>
-			<value name="TabFontHeight" type="long" data="12"/>
+			<value name="TabFontHeight" type="long" data="13"/>
 			<value name="SaveAllEditors" type="string" data=""/>
 			<value name="ToolbarAddSpace" type="long" data="0"/>
 			<value name="TabConsole" type="string" data="&lt;%c&gt;"/>
@@ -397,10 +399,10 @@
 			<value name="PanView.UsePicView2" type="hex" data="01"/>
 			<value name="PanView.RestoreOnStartup" type="hex" data="00"/>
 			<value name="Update.VerLocation" type="string" data=""/>
-			<value name="Update.CheckOnStartup" type="hex" data="00"/>
-			<value name="Update.CheckHourly" type="hex" data="00"/>
+			<value name="Update.CheckOnStartup" type="hex" data="01"/>
+			<value name="Update.CheckHourly" type="hex" data="01"/>
 			<value name="Update.ConfirmDownload" type="hex" data="01"/>
-			<value name="Update.UseBuilds" type="hex" data="02"/>
+			<value name="Update.UseBuilds" type="hex" data="01"/>
 			<value name="Update.InetTool" type="hex" data="00"/>
 			<value name="Update.InetToolCmd" type="string" data=""/>
 			<value name="Update.UseProxy" type="hex" data="00"/>
@@ -412,7 +414,7 @@
 			<value name="Update.DownloadPath" type="string" data="%TEMP%\ConEmu"/>
 			<value name="Update.LeavePackages" type="hex" data="00"/>
 			<value name="Update.PostUpdateCmd" type="string" data="echo Last successful update&gt;ConEmuUpdate.info &amp;&amp; date /t&gt;&gt;ConEmuUpdate.info &amp;&amp; time /t&gt;&gt;ConEmuUpdate.info"/>
-			<key name="HotKeys" modified="2017-09-17 15:47:14" build="161206">
+			<key name="HotKeys" modified="2019-11-14 18:40:23" build="191012">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="0000005b"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
@@ -588,122 +590,134 @@
 				<value name="KeyMacro31.Text" type="string" data=""/>
 				<value name="KeyMacro32" type="dword" data="00000000"/>
 				<value name="KeyMacro32.Text" type="string" data=""/>
-				<value name="CTS.VkBlock" type="hex" data="a4"/>
-				<value name="CTS.VkText" type="hex" data="a0"/>
+				<value name="CTS.VkBlock" type="hex" data="A4"/>
+				<value name="CTS.VkText" type="hex" data="A0"/>
 				<value name="CTS.VkAct" type="hex" data="00"/>
 				<value name="CTS.VkPrompt" type="hex" data="00"/>
-				<value name="FarGotoEditorVk" type="hex" data="a2"/>
+				<value name="FarGotoEditorVk" type="hex" data="A2"/>
 				<value name="DndLKey" type="hex" data="00"/>
-				<value name="DndRKey" type="hex" data="a2"/>
+				<value name="DndRKey" type="hex" data="A2"/>
 				<value name="WndDragKey" type="dword" data="00121101"/>
+				<value name="CheckUpdates" type="dword" data="00105b55"/>
+				<value name="Multi.NewWndConfirm" type="dword" data="00000000"/>
+				<value name="Multi.SplitSwap" type="dword" data="00125d58"/>
+				<value name="Multi.SplitSwapU" type="dword" data="00125d26"/>
+				<value name="Multi.SplitSwapD" type="dword" data="00125d28"/>
+				<value name="Multi.SplitSwapL" type="dword" data="00125d25"/>
+				<value name="Multi.SplitSwapR" type="dword" data="00125d27"/>
+				<value name="Multi.GroupInputAll" type="dword" data="00105d47"/>
+				<value name="Multi.GroupInputKey" type="dword" data="00125d47"/>
+				<value name="CloseToRightKey" type="dword" data="00000000"/>
+				<value name="Key.BufPrUp" type="dword" data="00121121"/>
+				<value name="Key.BufPrDn" type="dword" data="00121122"/>
 			</key>
 			<key name="Tasks" modified="2018-01-03 14:46:07" build="161206">
 				<value name="Count" type="long" data="20"/>
-				<key name="Task1" modified="2018-01-03 14:46:07" build="161206">
+				<key name="Task1" modified="2019-11-14 18:40:23" build="191012">
+					<value name="Name" type="string" data="{Oloobe1}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd E:\OfficeLicensingOOBE" | E:\OfficeLicensingOOBE\tools\init\SetEnvVar.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+				</key>
+				<key name="Task2" modified="2019-11-14 18:40:23" build="191012">
+					<value name="Name" type="string" data="{Oloobe2}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd E:\OfficeLicensingOOBE2\OfficeLicensingOOBE" | E:\OfficeLicensingOOBE\tools\init\SetEnvVar.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+				</key>
+				<key name="Task3" modified="2019-11-14 18:40:23" build="191012">
+					<value name="Name" type="string" data="{Oloobe3}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd E:\OfficeLicensingOOBE3\OfficeLicensingOOBE" | E:\OfficeLicensingOOBE\tools\init\SetEnvVar.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+				</key>
+				<key name="Task4" modified="2019-11-14 18:40:23" build="191012">
 					<value name="Name" type="string" data="{Ols1 PS}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00101170"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="powershell.exe -new_console:a -noexit -command &quot;cd D:\OlsRepo1\ols&quot; | C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1"/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd D:\OlsRepo1\ols" | D:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task2" modified="2018-01-03 14:46:07" build="161206">
+				<key name="Task5" modified="2019-11-14 18:40:23" build="191012">
 					<value name="Name" type="string" data="{Ols2 PS}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00101171"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="powershell.exe -new_console:a -noexit -command &quot;cd D:\OlsRepo2\ols&quot; |  C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1"/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd D:\OlsRepo2\ols" |  D:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task3" modified="2018-01-03 14:46:07" build="161206">
+				<key name="Task6" modified="2019-11-14 18:40:23" build="191012">
 					<value name="Name" type="string" data="{Ols3 PS}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00101172"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="powershell.exe -new_console:a -noexit -command &quot;cd D:\OlsRepo3\ols&quot; |  C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1"/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd D:\OlsRepo3\ols" |  D:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task4" modified="2018-01-03 14:46:07" build="161206">
+				<key name="Task7" modified="2019-11-14 18:40:23" build="191012">
 					<value name="Name" type="string" data="{Ols4 PS}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="powershell.exe -new_console:a -noexit -command &quot;cd D:\OlsRepo4\ols&quot; |  C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1"/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd D:\OlsRepo4\ols" |  D:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task5" modified="2018-01-03 14:46:07" build="161206">
+				<key name="Task8" modified="2019-11-14 18:40:23" build="191012">
 					<value name="Name" type="string" data="{Ols5PS}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="powershell.exe -new_console:a -noexit -command &quot;cd D:\OlsRepo5\ols&quot; |  C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1"/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd D:\OlsRepo5\ols" |  D:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task6" modified="2018-01-03 14:46:07" build="161206">
+				<key name="Task9" modified="2019-11-14 18:40:23" build="191012">
 					<value name="Name" type="string" data="{OlsDocs}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="powershell.exe -new_console:a -noexit -command &quot;cd D:\OlsDocs\OLS%20Docs&quot; |  C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1"/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd D:\OlsDocs\OLS%20Docs" |  C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task7" modified="2018-01-03 14:46:07" build="161206">
+				<key name="Task10" modified="2019-11-14 18:40:23" build="191012">
 					<value name="Name" type="string" data="{VSTS}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="powershell.exe -new_console:a -noexit -command &quot;cd D:\VSTS\OfficeVSTSTasks&quot; |  C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1"/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd D:\VSTS\OfficeVSTSTasks" |  C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task8" modified="2018-01-03 14:46:07" build="161206">
+				<key name="Task11" modified="2019-11-14 18:40:23" build="191012">
 					<value name="Name" type="string" data="{Omex1 PS}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="powershell.exe -new_console:a -noexit -command &quot;cd D:\OmexRepo1\omex&quot; |  C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1"/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd D:\OmexRepo1\omex" |  C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task9" modified="2018-01-03 14:46:59" build="161206">
+				<key name="Task12" modified="2019-11-14 18:40:23" build="191012">
 					<value name="Name" type="string" data="{Office365}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="powershell.exe -new_console:a -noexit -command &quot;cd D:\Office365\O365Admin&quot; |  C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1"/>
-					<value name="Active" type="long" data="0"/>
-					<value name="Count" type="long" data="1"/>
-				</key>
-				<key name="Task10" modified="2018-01-03 14:46:59" build="161206">
-					<value name="Name" type="string" data="{Ols1}"/>
-					<value name="Flags" type="dword" data="00000004"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="C:\Windows\System32\cmd.exe /k F:\OlsRepo1\OLS\tools\path1st\myenv.cmd"/>
-					<value name="Active" type="long" data="0"/>
-					<value name="Count" type="long" data="1"/>
-				</key>
-				<key name="Task11" modified="2018-01-03 14:46:59" build="161206">
-					<value name="Name" type="string" data="{Ols2}"/>
-					<value name="Flags" type="dword" data="00000004"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="C:\Windows\System32\cmd.exe /k F:\OlsRepo2\OLS\tools\path1st\myenv.cmd"/>
-					<value name="Active" type="long" data="0"/>
-					<value name="Count" type="long" data="1"/>
-				</key>
-				<key name="Task12" modified="2018-01-03 14:46:59" build="161206">
-					<value name="Name" type="string" data="{Ols3}"/>
-					<value name="Flags" type="dword" data="00000004"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="C:\Windows\System32\cmd.exe /k F:\OlsRepo3\OLS\tools\path1st\myenv.cmd"/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd D:\Office365\O365Admin" |  C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . C:\MyRepo\Tools\AliasSetter.ps1'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
@@ -721,7 +735,7 @@
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="cmd.exe /k &quot;%ConEmuBaseDir%\CmdInit.cmd&quot; -new_console:a"/>
+					<value name="Cmd1" type="string" data='cmd.exe /k "%ConEmuBaseDir%\CmdInit.cmd" -new_console:a'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
@@ -730,7 +744,7 @@
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="cmd.exe /k &quot;%ConEmuBaseDir%\CmdInit.cmd&quot;"/>
+					<value name="Cmd1" type="string" data='cmd.exe /k "%ConEmuBaseDir%\CmdInit.cmd"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
@@ -739,8 +753,8 @@
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="&quot;%windir%\syswow64\cmd.exe&quot; /k &quot;%ConEmuBaseDir%\CmdInit.cmd&quot;"/>
-					<value name="Cmd2" type="string" data="&quot;%windir%\syswow64\cmd.exe&quot; /k &quot;&quot;%ConEmuBaseDir%\CmdInit.cmd&quot; &amp; echo This is 32 bit cmd.exe -new_console:s50V&quot;"/>
+					<value name="Cmd1" type="string" data='"%windir%\syswow64\cmd.exe" /k "%ConEmuBaseDir%\CmdInit.cmd"'/>
+					<value name="Cmd2" type="string" data='"%windir%\syswow64\cmd.exe" /k ""%ConEmuBaseDir%\CmdInit.cmd" &amp; echo This is 32 bit cmd.exe -new_console:s50V"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
@@ -749,10 +763,10 @@
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="&gt; &quot;%windir%\system32\cmd.exe&quot; /k &quot;&quot;%ConEmuBaseDir%\CmdInit.cmd&quot; &amp; echo This is Native cmd.exe&quot;"/>
+					<value name="Cmd1" type="string" data='&gt; "%windir%\system32\cmd.exe" /k ""%ConEmuBaseDir%\CmdInit.cmd" &amp; echo This is Native cmd.exe"'/>
 					<value name="Active" type="long" data="1"/>
 					<value name="Count" type="long" data="2"/>
-					<value name="Cmd2" type="string" data="&quot;%windir%\syswow64\cmd.exe&quot; /k &quot;&quot;%ConEmuBaseDir%\CmdInit.cmd&quot; &amp; echo This is 32 bit cmd.exe -new_console:s50V&quot;"/>
+					<value name="Cmd2" type="string" data='"%windir%\syswow64\cmd.exe" /k ""%ConEmuBaseDir%\CmdInit.cmd" &amp; echo This is 32 bit cmd.exe -new_console:s50V"'/>
 				</key>
 				<key name="Task18" modified="2018-01-03 14:46:59" build="161206">
 					<value name="Name" type="string" data="{Shells::PowerShell}"/>
@@ -768,7 +782,7 @@
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="cmd.exe /k type &quot;%ConEmuBaseDir%\Addons\AnsiColors16t.ans&quot; -cur_console:n"/>
+					<value name="Cmd1" type="string" data='cmd.exe /k type "%ConEmuBaseDir%\Addons\AnsiColors16t.ans" -cur_console:n'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
@@ -777,7 +791,7 @@
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="*cmd.exe /k Title Chocolatey &amp; &quot;%ConEmuBaseDir%\Addons\ChocolateyAbout.cmd&quot;"/>
+					<value name="Cmd1" type="string" data='*cmd.exe /k Title Chocolatey &amp; "%ConEmuBaseDir%\Addons\ChocolateyAbout.cmd"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
@@ -790,6 +804,17 @@
 			</key>
 			<value name="KillSshAgent" type="hex" data="01"/>
 			<value name="StatusBar.Hide.CellI" type="hex" data="01"/>
+			<value name="Language" type="string" data="en"/>
+			<value name="ClipboardAllLinesPosix" type="hex" data="00"/>
+			<value name="ClipboardFirstLinePosix" type="hex" data="00"/>
+			<value name="AnsiLogCodes" type="hex" data="00"/>
+			<value name="RestoreInactive" type="hex" data="00"/>
+			<value name="DynamicBufferHeight" type="hex" data="01"/>
+			<value name="AutoReloadEnvironment" type="hex" data="01"/>
+			<value name="AutoTrimSingleLine" type="hex" data="00"/>
+			<value name="StatusBar.Hide.InputGrouping" type="hex" data="00"/>
+			<value name="StatusBar.Hide.WMode" type="hex" data="01"/>
 		</key>
 	</key>
 </key>
+

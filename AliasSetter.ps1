@@ -1,6 +1,6 @@
 # EnvironmentVariables
 
-$env:PATH += ";C:\MyRepo\Tools"
+$env:PATH += ";D:\MyRepo\Tools"
 
 $computerName = get-childitem env:computername
 if ($computerName.Value -eq "SYHAMZA-MACHINE") {
