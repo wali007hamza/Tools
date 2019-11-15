@@ -95,23 +95,6 @@
 			<value name="StoreTaskbarCommands" type="hex" data="00"/>
 			<value name="JumpListAutoUpdate" type="hex" data="01"/>
 			<value name="SaveCmdHistory" type="hex" data="01"/>
-			<value name="CmdLineHistory" type="multi">
-				<line data="{Oloobe2}"/>
-				<line data="{Oloobe1}"/>
-				<line data="{Ols1 PS}"/>
-				<line data="{Ols2 PS}"/>
-				<line data="{Ols4 PS}"/>
-				<line data="{Ols3 PS}"/>
-				<line data="{Omex1 PS}"/>
-				<line data="{VSTS}"/>
-				<line data="{Ols5PS}"/>
-				<line data="{Office365}"/>
-				<line data="{Shells::PowerShell (Admin)}"/>
-				<line data="{OlsDocs}"/>
-				<line data="{Ols1}"/>
-				<line data="{Ols3}"/>
-				<line data="{Ols2}"/>
-			</value>
 			<value name="SingleInstance" type="hex" data="00"/>
 			<value name="ShowHelpTooltips" type="hex" data="01"/>
 			<value name="Multi" type="hex" data="01"/>
@@ -622,30 +605,30 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task2" modified="2019-11-14 18:40:23" build="191012">
+				<key name="Task2" modified="2019-11-15 15:38:13" build="191012">
 					<value name="Name" type="string" data="{Oloobe2}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd E:\OfficeLicensingOOBE2\OfficeLicensingOOBE" | E:\OfficeLicensingOOBE\tools\init\SetEnvVar.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd E:\OfficeLicensingOOBE2\OfficeLicensingOOBE" | E:\OfficeLicensingOOBE2\OfficeLicensingOOBE\tools\init\SetEnvVar.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task3" modified="2019-11-14 18:40:23" build="191012">
+				<key name="Task3" modified="2019-11-15 15:38:13" build="191012">
 					<value name="Name" type="string" data="{Oloobe3}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd E:\OfficeLicensingOOBE3\OfficeLicensingOOBE" | E:\OfficeLicensingOOBE\tools\init\SetEnvVar.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd E:\OfficeLicensingOOBE3\OfficeLicensingOOBE" | E:\OfficeLicensingOOBE3\OfficeLicensingOOBE\tools\init\SetEnvVar.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task4" modified="2019-11-14 18:40:23" build="191012">
+				<key name="Task4" modified="2019-11-15 15:38:13" build="191012">
 					<value name="Name" type="string" data="{Ols1 PS}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00101170"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd D:\OlsRepo1\ols" | D:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
+					<value name="Cmd1" type="string" data='powershell.exe -new_console:a -noexit -command "cd D:\OlsRepo1\ols" | . D:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1 | . D:\MyRepo\Tools\AliasSetter.ps1'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>

@@ -15,7 +15,7 @@ function Work {
 #Development Aliases
 
 function dev_17($fileName){
-    cmd /c start "E:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE" $fileName
+    & $Env:dev_17 $fileName
 }
 
 function OpenOls{
@@ -100,12 +100,12 @@ function ToRepo {
 set-alias repo ToRepo
 
 function OpenAliasSetter {
-    code C:\MyRepo\Tools\AliasSetter.ps1
+    code D:\MyRepo\Tools\AliasSetter.ps1
 }
 set-alias open_aliasSetter OpenAliasSetter
 
 function CodeOpenAliasSetter {
-    code C:\MyRepo\Tools\AliasSetter.ps1
+    code D:\MyRepo\Tools\AliasSetter.ps1
 }
 
 set-alias run_aliasSetter C:\MyRepo\Tools\AliasSetter.ps1
