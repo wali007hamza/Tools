@@ -1,6 +1,7 @@
 # EnvironmentVariables
 
 $env:PATH += ";D:\MyRepo\Tools"
+$env:MyRepo = $PSScriptRoot
 
 $computerName = get-childitem env:computername
 if ($computerName.Value -eq "SYHAMZA-MACHINE") {
@@ -111,7 +112,7 @@ function CodeOpenAliasSetter {
 set-alias run_aliasSetter C:\MyRepo\Tools\AliasSetter.ps1
 
 function InitEnv {
-    C:\MyRepo\Tools\PowerShellEnvironmentSetter.ps1
+    & ("{0}\PowerShellEnvironmentSetter.ps1" -f $env:MyRepo)
 }
 set-alias init_env InitEnv
 
