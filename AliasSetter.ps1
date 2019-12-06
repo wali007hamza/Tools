@@ -238,3 +238,7 @@ function deploy_gallatinEdog([string]$buildNumber) {
 function deploy_PREDog([string]$buildNumber) {
     cmd /c \\ocentral\Build\VSTSCICDPrototype\ols\official\${buildNumber}\target\x64\Ship\olssetup\en-us\setup\Tools\WarmDeploy\WarmDeploy.cmd \\ocentral\Build\VSTSCICDPrototype\ols\official\${buildNumber}\target\x64\Ship\olssetup\en-us\setup\WARM\Environments\Ols-EDog-Cloud\DeploymentSpec-AllRegions.xml -Notes "Triggered via Warm script"
 }
+
+function open_code_for_repos(){
+    code "E:\OfficeLicensingOOBE" | code "E:\OfficeLicensingOOBE2\OfficeLicensingOOBE" | code "D:\OlsRepo1\OLS" | code "D:\OlsRepo2\OLS" | code "D:\OlsRepo3\OLS"
+}
